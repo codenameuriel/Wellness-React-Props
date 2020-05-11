@@ -3,19 +3,17 @@ import { wellnessFactors } from './data';
 import GuidanceItem from './GuidanceItem';
 
 export default class GuidanceContainer extends React.Component {
-    generateTableItems = () => {
-        wellnessFactors.sort((a,b) => b.stars - a.stars)
-        return wellnessFactors.map((factor, index) => <GuidanceItem
-            key={index}
-            title={factor.title}
-            image={factor.image}
-            description={factor.description}
-            stars={factor.stars}
-        />)
-    }
-
 
     renderItemInfo = () => {
+        // const getItemInfo = () => {
+        //     wellnessFactors.sort((a,b) => b.stars - a.stars)
+        //     .map((factor, index) => <GuidanceItem
+        //         key={index}
+        //         factor={factor}
+        //     />)
+        // }
+        // how to abstract this?
+
         return (
             <div>
                 <h3>Wellness Factors Described</h3>
@@ -26,10 +24,16 @@ export default class GuidanceContainer extends React.Component {
                             <td>Image</td>
                             <td>Description</td>
                             <td>Stars</td>
+                            <td>Priority</td>
                         </tr>
                     </thead>
                     <tbody>
-                        {this.generateTableItems()}
+                        {/* {this.getItemInfo()} */}
+                        {wellnessFactors.sort((a,b) => b.stars - a.stars)
+                            .map((factor, index) => <GuidanceItem
+                                key={index}
+                                factor={factor}
+                            />)}
                     
                         
                         {/** TODO:  Render GuidanceItems here

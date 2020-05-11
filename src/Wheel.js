@@ -14,6 +14,8 @@ export default class Wheel extends React.Component {
             id={factor.id}
             color={factor.color}
             title={factor.title}
+            isPriority={factor.isPriority}
+            // pull this out here so that wellnessItem.js has access to it
         />
         )
     }
