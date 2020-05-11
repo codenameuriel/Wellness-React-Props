@@ -23,6 +23,7 @@ export default class GuidanceContainer extends React.Component {
                             <td>Image</td>
                             <td>Description</td>
                             <td>Stars</td>
+                            <td>Priority?</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -33,6 +34,7 @@ export default class GuidanceContainer extends React.Component {
                         image={factor.image} 
                         description={factor.description} 
                         stars={factor.stars}
+                        isPriority={factor.isPriority}
                         />)
                             /** TODO:  Render GuidanceItems here
                                     Check the GuidanceItem component for the expect props

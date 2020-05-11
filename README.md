@@ -48,7 +48,7 @@ After cloning down the project:
 
 ### Advanced Deliverables
 If you get through all of the Core Deliverables, try your hand at the Advanced ones. Check out the gif below for how it should look. 
-- Update GuidanceContainer and GuidanceItem to also render a column for `isPriority`. 
+- √√√Update GuidanceContainer and GuidanceItem to also render a column for `isPriority`. 
 - If a WellnessItem is a priority, render its background gold instead of its given color. All you'll need to change is the color prop passed to `PieCSSDeck`.
 
 ![alt text][advanced_image]
