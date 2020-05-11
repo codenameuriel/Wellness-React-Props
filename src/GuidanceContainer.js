@@ -5,6 +5,17 @@ import GuidanceItem from './GuidanceItem';
 export default class GuidanceContainer extends React.Component {
 
     renderItemInfo = () => {
+        const sortedFactors = wellnessFactors.sort((a,b) => {
+            if(a.stars > b.stars){
+                return -1;
+            }
+            else{
+                return 1;
+            }
+        });
+
+        console.log("SORTED", sortedFactors);
+
         return (
             <div>
                 <h3>Wellness Factors Described</h3>
@@ -24,7 +35,7 @@ export default class GuidanceContainer extends React.Component {
                                             Can you find it? 
                                             What warning did you get and how did it help you?
                         */}
-                        {wellnessFactors.map(factor => {
+                        {sortedFactors.map(factor => {
                             console.log("GUIDEFACTOR", factor);
                             return <GuidanceItem factor={factor} key={`guidance_${factor.id}`} />
                         })}
