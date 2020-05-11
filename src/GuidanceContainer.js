@@ -19,7 +19,7 @@ export default class GuidanceContainer extends React.Component {
                     </thead>
                     <tbody>
                     {
-                        wellnessFactors.map(factor => <GuidanceItem factor={factor}/>)
+                        wellnessFactors.map(factor => <GuidanceItem key= {factor.id} factor={factor}/>)
                     }               
                     </tbody>
                 </table>

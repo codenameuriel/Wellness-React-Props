@@ -5,6 +5,19 @@ import { Pie } from './styles';
 
 
 export default class Wheel extends React.Component {
+    constructor(props){
+        super()
+        this.state = {
+            color : props.color
+        }
+    }
+
+    ifPriority = () => {
+        this.setState({
+            color: "gold"
+        })
+    }
+
     generateWellnessItem = () => {
         return wellnessFactors.map((factor,index) => 
             <WellnessItem 
