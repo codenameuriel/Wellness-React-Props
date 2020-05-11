@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Wheel from './Wheel.js';
-// import GuidanceContainer from './GuidanceContainer.js';
+import GuidanceContainer from './GuidanceContainer.js';
 
 function App() {
     return (
@@ -12,7 +12,7 @@ function App() {
 
         <hr />
         {/** TODO: Import and render the GuidanceContainer component, provided for you. It does not need any props. */}
-        {/* <GuidanceContainer /> */}
+        <GuidanceContainer />
       </div>
     );
 }

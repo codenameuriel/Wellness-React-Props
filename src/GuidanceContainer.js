@@ -24,7 +24,7 @@ export default class GuidanceContainer extends React.Component {
                                             Can you find it? 
                                             What warning did you get and how did it help you?
                         */}
-                        {/* <GuidanceItem /> */}
+                        <GuidanceItem title={wellnessFactors.title}/>
                         
                     </tbody>
                 </table>
