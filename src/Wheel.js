@@ -6,11 +6,15 @@ import { Pie } from './styles';
 
 export default class Wheel extends React.Component {
     generateInnerJSX = () => {
-        return wellnessFactors.map( item => {
-            <WellnessItem id= {item.id}/>;
-            <WellnessItem title= {item.title}/>;
-            <WellnessItem color= {item.color}/>;
-        })
+        return wellnessFactors.map((item,index) => 
+            <WellnessItem
+            key = {index}
+            id = {item.id}
+            color = {item.color}
+            title = {item.title}
+            isPriority = {item.isPriority}
+            />
+        )
     }
     render(){
         console.log(this.props)
