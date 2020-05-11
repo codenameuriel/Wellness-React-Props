@@ -15,9 +15,14 @@ export default class GuidanceContainer extends React.Component {
                             <td>Image</td>
                             <td>Description</td>
                             <td>Stars</td>
+                            <td>Priority?</td>
                         </tr>
                     </thead>
                     <tbody>
+                        {console.log(wellnessFactors)}
+                        {wellnessFactors.map(factor => {
+                            return <GuidanceItem factor={factor} key={`guidance_${factor.id}`} />
+                        })}
                         {/** TODO:  Render GuidanceItems here
                                     Check the GuidanceItem component for the expect props
                                     BUG CATCHER: There's a bug in GuidanceItem that will make it fail. 
