@@ -1,13 +1,16 @@
 import React from 'react';
 
 const GuidanceItem = (props) => {
+
+    const {title, image, description, stars, isPriority} = props.factor;
+
     return (
         <tr>
-            <td>{props.factor.title}</td>
-            <td><img src={props.factor.image} alt={props.factor.title}/></td>
-            <td>{props.factor.description}</td>
-            <td>{'⭐️'.repeat(props.factor.stars)}</td>
-            <td>{props.isPriority ? "YES" : "NO"}</td>
+            <td>{title}</td>
+            <td><img src={image} alt={title}/></td>
+            <td>{description}</td>
+            <td>{'⭐️'.repeat(stars)}</td>
+            <td>{isPriority ? "YES" : "NO"}</td>
         </tr>
     )
 }

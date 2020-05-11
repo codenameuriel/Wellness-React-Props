@@ -14,11 +14,14 @@ export default class Wheel extends React.Component {
                  */}
                 {wellnessFactors.map(factor => {
                     console.log("factor", factor);
+
+                    const {id, color, title, isPriority} = factor;
+
                     return (
-                        <WellnessItem key={`wellness_${factor.id}`} id={factor.id} 
-                            color={factor.color}
-                            title={factor.title}
-                            isPriority={factor.isPriority} />
+                        <WellnessItem key={`wellness_${id}`} id={id} 
+                            color={color}
+                            title={title}
+                            isPriority={isPriority} />
                     )
                 })}
             </Pie>
