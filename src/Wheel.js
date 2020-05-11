@@ -5,21 +5,21 @@ import { Pie } from './styles';
 
 
 export default class Wheel extends React.Component {
-    constructor(props){
-        super()
-        this.state = {
-            color : props.color
-        }
-    }
+    // constructor(props){
+    //     super()
+    //     this.state = {
+    //         color : props.color
+    //     }
+    // }
 
-    ifPriority = () => {
-        this.setState({
-            color: 'gold'
-        })
-    }
+    // ifPriority = () => {
+    //     this.setState({
+    //         color: 'gold'
+    //     })
+    // }
 
     generateWellnessItem = () => {
-        return wellnessFactors.sort((a, b) => (a.stars > b.stars) ? -1 : 1).map((factor,index) => 
+        return wellnessFactors.map((factor,index) => 
             <WellnessItem 
             key = {index}
             id = {factor.id}

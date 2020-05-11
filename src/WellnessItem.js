@@ -7,7 +7,7 @@ export default class WellnessItem extends React.Component {
         const { id, color, title, isPriority } = this.props
         return (
             <HoldCSSDeck rotate={(id - 1) * 45}>
-                <PieCSSDeck rotate={45} color={color}>
+                <PieCSSDeck rotate={45} color={ isPriority ? "#D4AF37" : color}>
                     <div className="title">{title}</div>
                 </PieCSSDeck>
             </HoldCSSDeck>
