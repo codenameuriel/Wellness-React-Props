@@ -4,7 +4,7 @@ import GuidanceItem from './GuidanceItem';
 
 export default class GuidanceContainer extends React.Component {
 
-    renderItemInfo = () => {
+    renderItemInfo = () => {wellnessFactors.sort(function(a, b){return a.stars - b.stars})
         return (
             <div>
                 <h3>Wellness Factors Described</h3>
@@ -25,6 +25,7 @@ export default class GuidanceContainer extends React.Component {
                                             What warning did you get and how did it help you?
                         */}
                         {/* props was never imported.. the error was props was not defined. */}
+                   
                            {wellnessFactors.map(data => <GuidanceItem factor={data}  />)}
                     </tbody>
                 </table>
