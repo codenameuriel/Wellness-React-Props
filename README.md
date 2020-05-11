@@ -43,7 +43,7 @@ After cloning down the project:
 √√√- Render all WellnessItems in the Wheel
 - Give WellnessItems default prop for color in case you forget!
 - √√√Render all GuidanceItems with correct information underneath. Hint for stars: `'⭐️'.repeat(5)` will create a string of 5 stars for you.
-- Sort the Guidance Items by number of stars
+- √√Sort the Guidance Items by number of stars
 - Map out the component hierarchy and which components need which props
 
 ### Advanced Deliverables
