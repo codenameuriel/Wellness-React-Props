@@ -4,10 +4,11 @@ import { HoldCSSDeck, PieCSSDeck } from './styles';
 
 export default class WellnessItem extends React.Component {
     render(){
-        const { id, color, title } = this.props.factor
+        const { id, color, title, isPriority } = this.props.factor
+      
         return (
             <HoldCSSDeck rotate={(id - 1) * 45}>
-                <PieCSSDeck rotate={45} color={color ? color : 'grey'}>
+                <PieCSSDeck rotate={45} color={isPriority ? 'gold' : color}>
                     <div className="title">{title}</div>
                 </PieCSSDeck>
             </HoldCSSDeck>

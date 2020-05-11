@@ -15,6 +15,7 @@ export default class GuidanceContainer extends React.Component {
                             <td>Image</td>
                             <td>Description</td>
                             <td>Stars</td>
+                            <td>Priority?</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -26,7 +27,7 @@ export default class GuidanceContainer extends React.Component {
                         */}
                         {/* props was never imported.. the error was props was not defined. */}
                    
-                           {wellnessFactors.map(data => <GuidanceItem factor={data}  />)}
+                           {wellnessFactors.map(data => <GuidanceItem factor={data}  key={data.id}/>)}
                     </tbody>
                 </table>
             </div>
