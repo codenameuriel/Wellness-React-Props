@@ -7,7 +7,6 @@ import { Pie } from './styles';
 export default class Wheel extends React.Component {
     
     render(){
-        console.log(wellnessFactors)
         return (
             <Pie size={300}>
                 {wellnessFactors.map((factor, index ) => 

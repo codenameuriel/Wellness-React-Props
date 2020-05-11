@@ -1,14 +1,22 @@
 import React from 'react';
+import { render } from '@testing-library/react';
 
-const GuidanceItem = () => {
-    return (
-        <tr>
-            <td>{this.props.factor.title}</td>
-            <td><img src={this.props.factor.image} alt={this.props.factor.title}/></td>
-            <td>{this.props.factor.description}</td>
-            <td>{this.props.factor.starts}</td>
-        </tr>
-    )
+class GuidanceItem extends React.Component {
+
+    render(){
+        console.log(this.props)
+        const { image, title, description, stars } = this.props
+
+        return (
+            <tr>
+                <td title={title}>{title}</td>
+                <td><img src={image} alt={title}/></td>
+                <td>{description}</td>
+                <td>{'⭐️'.repeat(stars)}</td>
+            </tr>
+        )
+    }
+    
 }
 
 export default GuidanceItem;
