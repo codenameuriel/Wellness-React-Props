@@ -17,7 +17,8 @@ export default class Wheel extends React.Component {
                     return (
                         <WellnessItem key={`wellness_${factor.id}`} id={factor.id} 
                             color={factor.color}
-                            title={factor.title} />
+                            title={factor.title}
+                            isPriority={factor.isPriority} />
                     )
                 })}
             </Pie>

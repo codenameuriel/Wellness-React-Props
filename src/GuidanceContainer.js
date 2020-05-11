@@ -26,6 +26,7 @@ export default class GuidanceContainer extends React.Component {
                             <td>Image</td>
                             <td>Description</td>
                             <td>Stars</td>
+                            <td>Priority</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -36,7 +37,6 @@ export default class GuidanceContainer extends React.Component {
                                             What warning did you get and how did it help you?
                         */}
                         {sortedFactors.map(factor => {
-                            console.log("GUIDEFACTOR", factor);
                             return <GuidanceItem factor={factor} key={`guidance_${factor.id}`} />
                         })}
                     </tbody>
