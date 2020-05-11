@@ -19,4 +19,10 @@ export default class WellnessItem extends React.Component {
  *  TODO: Add default props to the WellnessItem for color 
  *          the default color should be some kind of grey so it stands out
  *          TEST: do not pass down a prop for the color and see the whole circle go grey! 
+ * 
+ *  H O W   D O   I   T E S T   M Y   D E F A U L T   P R O P S 
  */
+
+WellnessItem.defaultProps = {
+    color: 'gray'
+}
