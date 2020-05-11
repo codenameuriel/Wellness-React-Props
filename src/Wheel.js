@@ -16,7 +16,9 @@ export default class Wheel extends React.Component {
                  key={index}
                  id={factor.id}
                  title={factor.title}
-                 color={factor.color} />)}
+                 color={factor.color}
+                 isPriority={factor.isPriority}
+                 />)}
             </Pie>
         )
     }
