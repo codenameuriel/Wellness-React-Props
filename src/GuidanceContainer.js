@@ -24,7 +24,8 @@ export default class GuidanceContainer extends React.Component {
                                             Can you find it? 
                                             What warning did you get and how did it help you?
                         */}
-                           
+                        {/* props was never imported.. the error was props was not defined. */}
+                           {wellnessFactors.map(data => <GuidanceItem factor={data}  />)}
                     </tbody>
                 </table>
             </div>

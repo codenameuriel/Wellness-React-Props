@@ -12,7 +12,7 @@ export default class Wheel extends React.Component {
                  *         check the WellnessItem component to see what it's expecting for props
                  *         Hint: Use your ES6 techniques
                  */}
-                 {wellnessFactors.map(factor => <WellnessItem factor={factor}/>)}
+                 {wellnessFactors.map(factor => <WellnessItem factor={factor} key={factor.id}/>)}
             </Pie>
         )
     }
