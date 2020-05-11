@@ -1,14 +1,13 @@
-import React from 'react';
-
-const GuidanceItem = () => {
+import React, {Component} from 'react';
+export default class GuidanceItem extends Component {
+GuidanceItem = () => {
     return (
         <tr>
-            <td>{props.factor.title}</td>
-            <td><img src={props.factor.image} alt={props.factor.title}/></td>
-            <td>{/** TODO: Add the correct prop here */}</td>
-            <td>{/** TODO: Add the correct prop here */}</td>
+            <td>this.factor.title}</td>
+            <td><img src={this.factor.image} alt={this.factor.title}/></td>
+            <td>{this.factor.description}</td>
+            <td>{'⭐️'.repeat(this.factor.stars)}</td>
         </tr>
     )
 }
-
-export default GuidanceItem;
+}
