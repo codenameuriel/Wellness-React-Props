@@ -4,6 +4,7 @@ import GuidanceItem from './GuidanceItem';
 
 export default class GuidanceContainer extends React.Component {
     generateTableItems = () => {
+        wellnessFactors.sort((a,b) => b.stars - a.stars)
         return wellnessFactors.map((factor, index) => <GuidanceItem
             key={index}
             title={factor.title}
@@ -29,6 +30,8 @@ export default class GuidanceContainer extends React.Component {
                     </thead>
                     <tbody>
                         {this.generateTableItems()}
+                    
+                        
                         {/** TODO:  Render GuidanceItems here
                                     Check the GuidanceItem component for the expect props
                                     BUG CATCHER: There's a bug in GuidanceItem that will make it fail. 

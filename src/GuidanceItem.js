@@ -7,7 +7,7 @@ const GuidanceItem = (props) => {
             <td>{props.title}</td>
             <td><img src={props.image} alt={props.title}/></td>
             <td>{props.description}</td>
-            <td>{props.stars}</td>
+            <td>{'⭐️'.repeat(props.stars)}</td>
         </tr>
     )
 }
