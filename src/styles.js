@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+ 
 export const Pie = styled.div`
     position: relative;
     height: calc(${props => props.size} * 1px);

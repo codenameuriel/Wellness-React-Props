@@ -1,4 +1,7 @@
 import React from 'react';
+import { wellnessFactors } from './data';
+
+
 
 const GuidanceItem = () => {
     return (
@@ -11,4 +14,4 @@ const GuidanceItem = () => {
     )
 }
 
-export default GuidanceItem;
+export default GuidanceItem; 
