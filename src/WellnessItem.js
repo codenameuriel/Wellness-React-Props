@@ -15,6 +15,10 @@ export default class WellnessItem extends React.Component {
     }
 }
 
+WellnessItem.defaultProps ={
+    color: 'rgb(105,105,105)'
+}
+
 /**
  *  TODO: Add default props to the WellnessItem for color 
  *          the default color should be some kind of grey so it stands out
