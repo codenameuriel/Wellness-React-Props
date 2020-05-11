@@ -14,20 +14,22 @@ export default class Wheel extends React.Component {
 
     ifPriority = () => {
         this.setState({
-            color: "gold"
+            color: 'gold'
         })
     }
 
     generateWellnessItem = () => {
-        return wellnessFactors.map((factor,index) => 
+        return wellnessFactors.sort((a, b) => (a.stars > b.stars) ? -1 : 1).map((factor,index) => 
             <WellnessItem 
             key = {index}
             id = {factor.id}
             color = {factor.color}
             title = {factor.title}
+            isPriority = {factor.isPriority}
             />
         )
     }
+
 
     render(){
         return (
