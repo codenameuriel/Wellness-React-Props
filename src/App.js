@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Wheel from './Wheel.js'
-// import GuidanceContainer from './GuidanceContainer';
+import GuidanceContainer from './GuidanceContainer';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <h1> Welcome to the Wellness Center</h1>
       <Wheel />
       <hr />
-      {/* <GuidanceContainer /> */}
+      <GuidanceContainer />
     </div>
   );
 }
