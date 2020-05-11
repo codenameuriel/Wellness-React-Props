@@ -18,6 +18,7 @@ export default class GuidanceContainer extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
+                        <GuidanceItem/>
                         {/** TODO:  Render GuidanceItems here
                                     Check the GuidanceItem component for the expect props
                                     BUG CATCHER: There's a bug in GuidanceItem that will make it fail. 
