@@ -4,6 +4,23 @@ import GuidanceItem from './GuidanceItem';
 
 export default class GuidanceContainer extends React.Component {
 
+    
+    getFactorData = () => {
+        wellnessFactors.sort((a, b) => parseFloat(a.stars) - parseFloat(b.stars)).reverse();
+        return wellnessFactors.map((factor,index) => <GuidanceItem
+            key={index}
+		    title={factor.title}
+		    image={factor.image}
+		    description={factor.description}
+            stars={factor.stars}
+            isPriority={factor.isPriority}
+
+        />)
+    }
+    
+    
+    
+    
     renderItemInfo = () => {
         return (
             <div>
@@ -15,10 +32,13 @@ export default class GuidanceContainer extends React.Component {
                             <td>Image</td>
                             <td>Description</td>
                             <td>Stars</td>
+                            
                         </tr>
                     </thead>
                     <tbody>
-                        {/** TODO:  Render GuidanceItems here
+                        {
+                        this.getFactorData()
+                        /** TODO:  Render GuidanceItems here
                                     Check the GuidanceItem component for the expect props
                                     BUG CATCHER: There's a bug in GuidanceItem that will make it fail. 
                                             Can you find it? 
