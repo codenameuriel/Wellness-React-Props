@@ -3,7 +3,16 @@ import { wellnessFactors } from './data';
 import GuidanceItem from './GuidanceItem';
 
 export default class GuidanceContainer extends React.Component {
-
+    generateGuidanceItems = () => {
+        return wellnessFactors.map((factor, index) => 
+        <GuidanceItem
+            key = {index}
+            title = {factor.title}
+            image = {factor.image}
+            description = {factor.description}
+            stars = {factor.stars}
+                />)
+    }
     renderItemInfo = () => {
         return (
             <div>
@@ -24,6 +33,7 @@ export default class GuidanceContainer extends React.Component {
                                             Can you find it? 
                                             What warning did you get and how did it help you?
                         */}
+                        {this.generateGuidanceItems()}
                            
                     </tbody>
                 </table>

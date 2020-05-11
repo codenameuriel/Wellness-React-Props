@@ -1,12 +1,13 @@
 import React from 'react';
 
 const GuidanceItem = () => {
+    const { title, image, description, stars } = this.props
     return (
         <tr>
-            <td>{props.factor.title}</td>
-            <td><img src={props.factor.image} alt={props.factor.title}/></td>
-            <td>{/** TODO: Add the correct prop here */}</td>
-            <td>{/** TODO: Add the correct prop here */}</td>
+            <td>{title}</td>
+            <td><img src={image} alt={title}/></td>
+            <td>{description}</td>
+            <td>{stars}</td>
         </tr>
     )
 }
