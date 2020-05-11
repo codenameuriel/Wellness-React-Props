@@ -3,10 +3,10 @@ import React from 'react';
 const GuidanceItem = () => {
     return (
         <tr>
-            <td>{props.factor.title}</td>
-            <td><img src={props.factor.image} alt={props.factor.title}/></td>
-            <td>{/** TODO: Add the correct prop here */}</td>
-            <td>{/** TODO: Add the correct prop here */}</td>
+            <td>{this.props.factor.title}</td>
+            <td><img src={this.props.factor.image} alt={this.props.factor.title}/></td>
+            <td>{this.props.factor.description}</td>
+            <td>{this.props.factor.starts}</td>
         </tr>
     )
 }
