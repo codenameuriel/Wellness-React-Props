@@ -1,5 +1,5 @@
 import React from 'react';
-// import GuidanceContainer from './GuidanceContainer'
+import GuidanceContainer from './GuidanceContainer'
 
 const GuidanceItem = () => {
     return (
