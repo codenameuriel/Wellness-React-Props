@@ -1,13 +1,16 @@
 import React from 'react';
 
 
+// this.props would be used for a class component
+// this is a functional component
 
-class GuidanceItem extends React.Component {
-    render() {
+// originally improperly made a class component
 
-        // console.log(this.props)
-        
-        const { title, image, description, stars } = this.props.eachFactor
+const GuidanceItem = (props) => {
+
+    const { title, image, description, stars } = props.eachFactor
+
+      
 
             return (
                 <tr>
@@ -18,7 +21,6 @@ class GuidanceItem extends React.Component {
             </tr>
             )
         }
-    }
 // }
 
     

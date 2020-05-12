@@ -9,9 +9,11 @@ export default class Wheel extends React.Component {
     generateWellnessChart = () => {
         return wellnessFactors.map((eachFactor, index) => <WellnessItem
             key={index}
-            id={eachFactor.id}
-            color={eachFactor.color}
-            title={eachFactor.title}
+            {...eachFactor}  // spread the object key / value pairs
+            
+            // id={eachFactor.id}
+            // color={eachFactor.color}
+            // title={eachFactor.title}
         />
     )}
 

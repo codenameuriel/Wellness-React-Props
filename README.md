@@ -46,6 +46,13 @@ After cloning down the project:
 - Sort the Guidance Items by number of stars
 - Map out the component hierarchy and which components need which props
 
+App
+    |-Wheel
+        |= WellnessItem (props: id, title, color, stars)
+        |= Pie (props: )
+    |-Guidance Container
+        |= GuidanceItem (props: eachFactor (obj))
+
 ### Advanced Deliverables
 If you get through all of the Core Deliverables, try your hand at the Advanced ones. Check out the gif below for how it should look. 
 - Update GuidanceContainer and GuidanceItem to also render a column for `isPriority`. 
