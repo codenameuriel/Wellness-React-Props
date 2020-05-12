@@ -24,6 +24,9 @@ export default class GuidanceContainer extends React.Component {
                                             Can you find it? 
                                             What warning did you get and how did it help you?
                         */}
+                        {wellnessFactors.map((factor, index) => {
+                            return <GuidanceItem eachFactor={factor} key={index}/>
+                        })}
                            
                     </tbody>
                 </table>
