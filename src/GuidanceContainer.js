@@ -2,9 +2,12 @@ import React from 'react';
 import { wellnessFactors } from './data';
 import GuidanceItem from './GuidanceItem';
 
-export default class GuidanceContainer extends React.Component {
 
+export default class GuidanceContainer extends React.Component {
+    
+    
     renderItemInfo = () => {
+        wellnessFactors.sort((a,b) => b.stars - a.stars)
         return (
             <div>
                 <h3>Wellness Factors Described</h3>
@@ -15,14 +18,17 @@ export default class GuidanceContainer extends React.Component {
                             <td>Image</td>
                             <td>Description</td>
                             <td>Stars</td>
+                            <td>Priority?</td>
                         </tr>
                     </thead>
                     <tbody>
+                        {wellnessFactors.map(factor => <GuidanceItem key={factor.id} factor={factor} />)}
                         {/** TODO:  Render GuidanceItems here
                                     Check the GuidanceItem component for the expect props
                                     BUG CATCHER: There's a bug in GuidanceItem that will make it fail. 
                                             Can you find it? 
                                             What warning did you get and how did it help you?
+                                            props was undefined...added them to the params
                         */}
                            
                     </tbody>
